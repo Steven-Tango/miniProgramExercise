@@ -1,0 +1,146 @@
+<view class="search-box">
+  <!-- 需要设置背景图高度、颜色 -->
+  <view class="search">
+    <!-- 搜索框层 -->
+    <icon type="search" class="search-icon"></icon>
+    <input type="text" class="search-input" placeholder="华莱士全鸡汉堡 满38减16" />
+  </view>
+</view>
+
+
+<view class="box">
+  <view class="nav-box">
+    <view class="nav-item">
+      <navigator class="nav" hover-class="none">
+        <image class="nav-img" src="/img/01.png"></image>
+        <text class="nav-text">美食</text>
+      </navigator>
+      <navigator class="nav" hover-class="none">
+        <image class="nav-img" src="/img/02.png"></image>
+        <text class="nav-text">商超便利</text>
+      </navigator>
+      <navigator class="nav" hover-class="none">
+        <image class="nav-img" src="/img/03.png"></image>
+        <text class="nav-text">水果</text>
+      </navigator>
+      <navigator class="nav" hover-class="none">
+        <image class="nav-img" src="/img/04.png"></image>
+        <text class="nav-text">送药上门</text>
+      </navigator>
+      <navigator class="nav" hover-class="none">
+        <image class="nav-img" src="/img/05.png"></image>
+        <text class="nav-text">甜品饮品</text>
+      </navigator>
+
+    </view>
+    <view class="nav-item nav-item2">
+      <navigator class="nav" hover-class="none">
+        <image class="nav-img" src="/img/11.png"></image>
+        <text class="nav-text">午餐晚餐</text>
+      </navigator>
+      <navigator class="nav" hover-class="none">
+        <image class="nav-img" src="/img/12.png"></image>
+        <text class="nav-text">汉堡披萨</text>
+      </navigator>
+      <navigator class="nav" hover-class="none">
+        <image class="nav-img" src="/img/13.png"></image>
+        <text class="nav-text">分享赚钱</text>
+      </navigator>
+      <navigator class="nav" hover-class="none">
+        <image class="nav-img" src="/img/14.png"></image>
+        <text class="nav-text">炸鸡炸串</text>
+      </navigator>
+      <navigator class="nav" hover-class="none">
+        <image class="nav-img" src="/img/15.png"></image>
+        <text class="nav-text">社区买菜</text>
+      </navigator>
+    </view>
+
+    <view class="nav-item nav-item2">
+      <navigator class="nav" hover-class="none">
+        <image class="nav-img" src="/img/21.png"></image>
+        <text class="nav-text">鲜花绿植</text>
+      </navigator>
+      <navigator class="nav" hover-class="none">
+        <image class="nav-img" src="/img/22.png"></image>
+        <text class="nav-text">日韩料理</text>
+      </navigator>
+      <navigator class="nav" hover-class="none">
+        <image class="nav-img" src="/img/23.png"></image>
+        <text class="nav-text">美食地方</text>
+      </navigator>
+      <navigator class="nav" hover-class="none">
+        <image class="nav-img" src="/img/24.png"></image>
+        <text class="nav-text">快餐便当</text>
+      </navigator>
+      <navigator class="nav" hover-class="none">
+        <image class="nav-img" src="/img/25.png"></image>
+        <text class="nav-text">送药上门</text>
+      </navigator>
+    </view>
+  </view>
+  <image class="banner" src="/img/banner.png"></image>
+</view>
+
+<view class="list-box">
+  <rich-text class="title">附近推荐</rich-text>
+  <view class="tip-box">
+    <button class="tip">吃货联盟</button>
+    <button class="tip">30分钟达</button>
+    <button class="tip">满减优惠</button>
+    <button class="tip">配送费优惠</button>
+  </view>
+  <view class="list">
+    <view class="item">
+      <image src="/img/img1.png" class="item-img"></image>
+      <vivew class="item-right">
+        <rich-text class="item-title">华莱士 全鸡汉堡(未来城店)</rich-text>
+        <rich-text class="sale">
+          <text class="score"><text style="font-weight:bold;">4.6</text>分</text>
+          <text>月售1625</text>
+        </rich-text>
+        <rich-text class="item-t3">
+          起送价18元 免配送费
+          <text class="del">3.5￥</text>
+        </rich-text>
+        <rich-text class="pj">
+          <text>"鲜脆正宗好吃"</text>
+        </rich-text>
+        <rich-text>
+          <text class="tips">
+            <text class="tip"><text class="by">百亿补贴</text>2元</text>
+            <text class="tip">满38减16</text>
+            <text class="tip">满72减36</text>
+          </text>
+        </rich-text>
+      </vivew>
+    </view>
+  </view>
+
+  <view class="list">
+    <view class="item">
+      <image src="/img/img2.png" class="item-img"></image>
+      <vivew class="item-right">
+        <rich-text class="item-title">华莱士 全鸡汉堡(未来城店)</rich-text>
+        <rich-text class="sale">
+          <text class="score"><text style="font-weight:bold;">4.6</text>分</text>
+          <text>月售1625</text>
+        </rich-text>
+        <rich-text class="item-t3">
+          起送价18元 免配送费
+          <text class="del">3.5￥</text>
+        </rich-text>
+        <rich-text class="pj">
+          <text>"鲜脆正宗好吃"</text>
+        </rich-text>
+        <rich-text>
+          <text class="tips">
+            <text class="tip"><text class="by">百亿补贴</text>2元</text>
+            <text class="tip">满38减16</text>
+            <text class="tip">满72减36</text>
+          </text>
+        </rich-text>
+      </vivew>
+    </view>
+  </view>
+</view>

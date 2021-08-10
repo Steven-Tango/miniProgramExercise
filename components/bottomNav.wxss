@@ -1,0 +1,31 @@
+.bottom-nav{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  left: 0;
+  border-top: 1px solid #e0e0ee;
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.bottom-nav image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.bottom-nav navigator{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bottom-nav text{
+  font-size: 12px;
+  line-height: 2;
+}
+.choose-text{
+  color: #03b5fb;
+}
+.bottom-nav navigator:hover{
+  background-color: transparent;
+}

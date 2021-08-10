@@ -1,0 +1,22 @@
+<page-meta>
+  <navigation-bar title="{{nTitle}}">
+  </navigation-bar>
+</page-meta>
+<view class="page">
+  <view class="header">
+    <view class="sort" catchtap="clickSort">
+      <view class="sort-t {{isSortShow?'active':''}}">{{sortTitle}}</view>
+      <view class="sort-list {{isSortShow?'show':''}}">
+        <view class="sort-text" catchtap="chooseSort" data-title="综合排序">综合排序</view>
+        <view class="sort-text" catchtap="chooseSort" data-title="距离最近">距离最近</view>
+        <view class="sort-text" catchtap="chooseSort" data-title="销量最高">销量最高</view>
+        <view class="sort-text" catchtap="chooseSort" data-title="配送费从低到高">配送费从低到高</view>
+        <view class="sort-text" catchtap="chooseSort" data-title="起步价从低到高">起步价从低到高</view>
+        <view class="sort-text" catchtap="chooseSort" data-title="评分从高到低">评分从高到低</view>
+      </view>
+    </view>
+    <view class="sort-text">距离最近</view>
+    <view class="sort-text margin-l">销量最高</view>
+    <view class="choose">筛选</view>
+  </view>
+</view>

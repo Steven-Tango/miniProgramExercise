@@ -1,0 +1,14 @@
+<view class="bottom-nav">
+  <block wx:for="{{navList}}">
+    <navigator url="{{item.pagePath}}">
+      <block wx:if="{{current==item.name}}">
+        <image src="{{item.selectedImgPath}}" />
+        <text class="choose-text">{{item.name}}</text>
+      </block>
+      <block wx:else>
+        <image src="{{item.imgPath}}" />
+        <text>{{item.name}}</text>
+      </block>
+    </navigator>
+  </block>
+</view>
