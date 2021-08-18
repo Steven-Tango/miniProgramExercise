@@ -11,19 +11,19 @@
 <view class="box">
   <view class="nav-box">
     <view class="nav-item">
-      <navigator class="nav" hover-class="none">
+      <navigator class="nav" hover-class="none" url="../list/list?name=美食">
         <image class="nav-img" src="/img/01.png"></image>
         <text class="nav-text">美食</text>
       </navigator>
-      <navigator class="nav" hover-class="none">
+      <navigator class="nav" hover-class="none" url="../list/list?name=商品便利">
         <image class="nav-img" src="/img/02.png"></image>
         <text class="nav-text">商超便利</text>
       </navigator>
-      <navigator class="nav" hover-class="none">
+      <navigator class="nav" hover-class="none" url="../list/list?name=水果">
         <image class="nav-img" src="/img/03.png"></image>
         <text class="nav-text">水果</text>
       </navigator>
-      <navigator class="nav" hover-class="none">
+      <navigator class="nav" hover-class="none" url="../list/list?name=送药上门">
         <image class="nav-img" src="/img/04.png"></image>
         <text class="nav-text">送药上门</text>
       </navigator>

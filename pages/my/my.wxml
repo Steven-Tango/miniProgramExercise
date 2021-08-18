@@ -1,0 +1,6 @@
+<image class="img" src="{{headImg}}" bindtap="chooseImg"></image>
+<button   type="primary" class="btn">上传图片</button>
+<view class="img-box">
+  图片上传成功之后的内容
+  <image class="img" src="{{succseeImg}}"></image>
+</view>

@@ -1,22 +1,74 @@
 <page-meta>
-  <navigation-bar title="{{nTitle}}">
-  </navigation-bar>
+    <navigation-bar title="{{nTitle}}">
+    </navigation-bar>
 </page-meta>
 <view class="page">
-  <view class="header">
-    <view class="sort" catchtap="clickSort">
-      <view class="sort-t {{isSortShow?'active':''}}">{{sortTitle}}</view>
-      <view class="sort-list {{isSortShow?'show':''}}">
-        <view class="sort-text" catchtap="chooseSort" data-title="综合排序">综合排序</view>
-        <view class="sort-text" catchtap="chooseSort" data-title="距离最近">距离最近</view>
-        <view class="sort-text" catchtap="chooseSort" data-title="销量最高">销量最高</view>
-        <view class="sort-text" catchtap="chooseSort" data-title="配送费从低到高">配送费从低到高</view>
-        <view class="sort-text" catchtap="chooseSort" data-title="起步价从低到高">起步价从低到高</view>
-        <view class="sort-text" catchtap="chooseSort" data-title="评分从高到低">评分从高到低</view>
-      </view>
+    <view class="header">
+        <view class="sort" catchtap="clickSort">
+            <view class="sort-t {{isSortShow?'active':''}}">{{sortTitle}}</view>
+            <view class="sort-list {{isSortShow?'show':''}}">
+                <view class="sort-text" catchtap="chooseSort" data-title="综合排序">综合排序</view>
+                <view class="sort-text" catchtap="chooseSort" data-title="距离最近">距离最近</view>
+                <view class="sort-text" catchtap="chooseSort" data-title="销量最高">销量最高</view>
+                <view class="sort-text" catchtap="chooseSort" data-title="配送费从低到高">配送费从低到高</view>
+                <view class="sort-text" catchtap="chooseSort" data-title="起步价从低到高">起步价从低到高</view>
+                <view class="sort-text" catchtap="chooseSort" data-title="评分从高到低">评分从高到低</view>
+            </view>
+        </view>
+        <view class="sort-text">距离最近</view>
+        <view class="sort-text margin-l">销量最高</view>
+        <view class="choose">筛选</view>
     </view>
-    <view class="sort-text">距离最近</view>
-    <view class="sort-text margin-l">销量最高</view>
-    <view class="choose">筛选</view>
-  </view>
+
+    <view class="content">
+        <block wx:for="{{list}}" wx:key="{{index}}">
+            <view class="goods-item">
+                <view class="goods">
+                    <image class="img" src="{{item.imgPath}}"></image>
+                    <view class="goods-r">
+                        <view class="goods-title">
+                            <text wx:if="{{item.isPP}}" class="pp">品牌</text>
+                            <text class="title-name">{{item.title}}</text>
+                            <view class="fp-box">
+                                <text wx:if="{{item.isFP}}" class="fp">票</text>
+                                <text wx:if="{{item.isBX}}" class="fp">保</text>
+                            </view>
+                        </view>
+                        <view class="goods-rows2">
+                            <view class="stars">
+                                <view class="star-top" style="width:{{item.score/5*150}}rpx">
+                                    <image src="../../img/choose-star.png" mode="widthFix"></image>
+                                </view>
+                                <image class="star-bottom" src="../../img/star.png" mode="widthFix"></image>
+                            </view>
+                            <view class="score">{{item.score}}</view>
+                            <view class="sale">月售{{item.sale}}单</view>
+                        </view>
+                        <view class="goods-row3">
+                            <view class="row3-left">
+                                <text>￥{{item.goBuy}}起送</text>
+                                <text>配送费￥{{item.fee}}</text>
+                            </view>
+                            <view class="row3-r">
+                                <text class="dis">{{item.distance}}km</text>
+                                <text class="time">{{item.time}}分钟</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="active">
+                    <block wx:for="{{item.actives}}" wx:for-item="a" wx:for-index="k">
+                        <view class="ac-line">
+                            <text wx:if="{{k=='jian'}}" class="ac-jian">减</text>
+                            <text wx:if="{{k=='pei'}}" class="ac-pei">配</text>
+                            <text wx:if="{{k=='te'}}" class="ac-te">特</text>
+                            <text class="ac-text">{{a}}</text>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </block>
+    </view>
+
+    
 </view>

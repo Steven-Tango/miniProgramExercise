@@ -1,0 +1,55 @@
+<view class="header header-{{activeItem}}">
+  <view class="h-item" data-act="0" bindtap="changeItem">全部</view>
+  <view class="h-item" data-act="1" bindtap="changeItem">待消费</view>
+  <view class="h-item" data-act="2" bindtap="changeItem">待评价</view>
+  <view class="h-item" data-act="3" bindtap="changeItem">退款</view>
+</view>
+
+<view class="page">
+  <block wx:if="{{orderList.length==0}}">
+    <view class="null_page" wx:if="{{activeItem==0}}">您还未点过餐</view>
+    <view class="null_page" wx:if="{{activeItem==1}}">没有待消费的订单</view>
+    <view class="null_page" wx:if="{{activeItem==2}}">没有待评价的订单</view>
+    <view class="null_page" wx:if="{{activeItem==3}}">没有退款的订单</view>
+  </block>
+  <block wx:else>
+    <view class="list">
+      <block wx:for="{{orderList}}">
+        <view class="item">
+          <view class="row1">
+            <image class="img" src="{{item.shopImg}}"></image>
+            <view class="shop-name">{{item.shopName}}</view>
+            <view class="shop-status">{{item.delivery}}</view>
+          </view>
+          <view class="row2">
+            <view class="food-box">
+              <block wx:if="{{item.foodList.length==1}}">
+                <!-- 一件商品 -->
+                <image class="food-img" src="{{item.foodList[0].foodImg}}"></image>
+                <view class="food-name">{{item.foodList[0].foodName}}</view>
+              </block>
+              <block wx:else>
+                <!-- 多件商品 -->
+                <scroll-view class="scroll" scroll-x>
+                  <block wx:for="{{item.foodList}}" wx:for-item="food">
+                    <image class="food-img" src="{{food.foodImg}}"></image>
+                  </block>
+                </scroll-view>
+              </block>
+            </view>
+            <veiw class="money">
+              <text class="m"><text>￥</text>{{item.money}}</text>
+              <text class="amount">共{{item.foodList.length}}件</text>
+            </veiw>
+          </view>
+          <view class="row3">
+            <view class="btn" wx:if="{{item.status==='已完成'}}">再来一单</view>
+            <view class="btn" wx:if="{{item.status==='待评价'}}">立即评价</view>
+            <view class="btn" wx:if="{{item.status==='待消费'}}">立即付款</view>
+            <view class="btn" wx:if="{{item.status==='退款'}}">立即退款</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </block>
+</view>

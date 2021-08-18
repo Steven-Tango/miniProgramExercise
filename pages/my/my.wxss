@@ -1,1 +1,13 @@
-/* pages/my/my.wxss */
+.img{
+  width: 320rpx;
+  height: 320rpx;
+  border: 1px solid salmon;
+  display: block;
+  margin:  0 auto;
+}
+.img-box{
+  line-height: 3;
+}
+.btn{
+  margin-top: 20rpx;
+}

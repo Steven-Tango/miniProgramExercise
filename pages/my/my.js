@@ -1,66 +1,46 @@
 // pages/my/my.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    headImg: '',
+    succseeImg: ''
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  chooseImg: function () {
+    wx.chooseImage({
+      count: 1,
+      success: res => {
+        console.log(res)
+        this.setData({
+          headImg:res.tempFilePaths[0]
+        })
+      },
+      fail:err=>{
+        console.error(err)
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  //上传后的图片放到存储
+  upLoadImg:function(){
+    if(!this.data.headImg){
+      wx.showToast({
+        title: '未上传图片',
+        icon:'error',
+        duration:2000
+      })
+    }
+    let imgString = new Date().getTime();
+    wx.cloud.init()
+    wx.cloud.uploadFile({
+      cloudPath:"head"+imgString+".jpg",
+      filePath:this.data.headImg,
+      success:res=>{
+        console.log(res)
+        wx.showToast({
+          title: '上传成功',
+        })
+        this.setData({
+          succseeImg:res.fileID
+        })
+      }
+    })
   }
 })

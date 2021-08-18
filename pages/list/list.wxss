@@ -14,7 +14,7 @@
 
 .sort-t {
   padding: 0 20rpx;
-  font-style: 26rpx;
+  font-size: 26rpx;
   display: flex;
   align-items: center;
 }
@@ -64,3 +64,128 @@
   flex: 1;
   text-align: right;
 }
+
+
+content{
+  padding-top: 20rpx;
+}
+.goods-item{
+  border-bottom: 1px solid #eee;
+  padding: 20rpx 30rpx;
+}
+.goods{
+  display: flex;
+  /* justify-content: ; */
+  align-items: center;
+}
+.goods-r{
+  flex: 1;
+}
+.goods .img{
+  width: 128rpx;
+  height: 128rpx;
+  border: 1px solid #f5f5f5;
+  margin-right: 20rpx;
+}
+.goods-title{
+  display: flex;
+  align-items: center;
+}
+.goods-title .pp{
+  font-size: 24rpx;
+  color: #401002;
+  background-color: #ffe141;
+  padding: 5rpx 8rpx;
+  font-weight: bold;
+  margin-right: 10rpx;
+  line-height: 1;
+  width: 48rpx;
+}
+.goods-title .title-name{
+  width: 400rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.goods-title .fp-box{
+  flex: 1;
+  text-align: right;
+}
+.goods-title .fp{
+  font-size: 24rpx;
+  color: #ccc;
+  border: 1px solid #eee;
+  padding: 5rpx 5rpx;
+  line-height: 1;
+}.goods-rows2{
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.stars{
+  width: 150rpx;
+  height: 32rpx;
+  position: relative;
+}
+.stars image{
+  width: 150rpx  ;
+}
+.star-top{
+  width: 100rpx;
+  overflow: hidden;
+  position:absolute;
+  z-index:2;
+  top: 0;
+  left: 0;
+}
+.star-bottom{
+  z-index:1;
+  top:0;
+  left:0;
+}
+.score{
+  font-size: 26rpx;
+  color: #e46426;
+  margin-left: 10rpx;
+  margin-right: 20rpx;
+}
+.sale{
+  font-size: 26rpx;
+  color: #999;
+}
+.goods-row3{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #999;
+  font-size: 26rpx;
+}
+.time{
+  color: #078bfd;
+}
+.ac-line{
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 20rpx;
+}
+.ac-line text{
+  color: #fff;
+  padding: 3rpx;
+  line-height: 1;
+}
+.ac-jian{
+background-color: #ef7373;
+}
+.ac-pei{
+  background-color: #6bbb3e;
+}
+.ac-te{
+  background-color: #4db2ed;
+ }
+ .ac-line .ac-text{
+   color: #999;
+   margin-left: 10rpx;
+ }
